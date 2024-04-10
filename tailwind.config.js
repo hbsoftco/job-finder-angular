@@ -12,6 +12,7 @@ module.exports = {
         bgWhite: "#F9F9F9",
         lightGray: "#A0A7B1",
         darkText: "#3D355E",
+        semiDarkText: "#524B6B",
       },
       fontFamily: {
         Roboto: ["Roboto"],

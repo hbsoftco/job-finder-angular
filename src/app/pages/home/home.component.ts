@@ -7,6 +7,8 @@ import { Category } from '../../shared/interfaces/Category';
 import { HomeService } from '../../services/home.service';
 import { CommonModule } from '@angular/common';
 import { SectionTitleComponent } from '../../components/section-title/section-title.component';
+import { JobBoxComponent } from '../../components/job-box/job-box.component';
+import { Job } from '../../shared/interfaces/Job';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +19,7 @@ import { SectionTitleComponent } from '../../components/section-title/section-ti
     ButtonComponent,
     CategoryBtnComponent,
     SectionTitleComponent,
+    JobBoxComponent,
     CommonModule,
   ],
   templateUrl: './home.component.html',
@@ -24,17 +27,30 @@ import { SectionTitleComponent } from '../../components/section-title/section-ti
 })
 export class HomeComponent {
   categories: Category[] = [];
+  jobs: Job[] = [];
 
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     this.loadCategories();
+    this.loadJobs();
   }
 
   loadCategories(): void {
     this.homeService.getAllCategories().subscribe({
       next: (data: Category[]) => {
         this.categories = data;
+      },
+      error: (error) => {
+        console.error('Error fetching categories:', error);
+      },
+    });
+  }
+
+  loadJobs(): void {
+    this.homeService.getAllJobs().subscribe({
+      next: (data: Job[]) => {
+        this.jobs = data;
       },
       error: (error) => {
         console.error('Error fetching categories:', error);

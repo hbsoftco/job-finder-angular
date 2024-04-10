@@ -21,7 +21,7 @@
       routerLinkText="View all"
     ></app-section-title>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
       <div class="col-span-1" *ngFor="let category of categories">
         <app-category-btn
           [svg]="category.svg"
@@ -30,5 +30,9 @@
         ></app-category-btn>
       </div>
     </div>
+
+    <app-section-title title="Job Recommendation"></app-section-title>
+
+    <app-job-box *ngFor="let job of jobs" [job]="job"></app-job-box>
   </div>
 </div>

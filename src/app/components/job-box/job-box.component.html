@@ -1,0 +1,28 @@
+<div class="bg-white rounded-lg shadow-sm p-5 mb-4">
+  <div class="flex justify-between items-start mb-4">
+    <div class="flex justify-start items-center">
+      <div class="w-10 h-10 rounded-full bg-gray-100"></div>
+      <div class="ml-2">
+        <h3 class="text-sm font-bold mb-1 text-darkText">{{ job.jobTitle }}</h3>
+        <h5 class="text-xs text-lightGray">{{ job.location }}</h5>
+      </div>
+    </div>
+    <div>
+      <img src="/assets/svg/save.svg" alt="save" />
+    </div>
+  </div>
+
+  <div class="flex justify-between items-center mb-4">
+    <div>
+      <span class="text-sm font-bold text-darkText">${{ job.salary }}K</span>
+      <span class="text-xs text-lightGray">/Mo</span>
+    </div>
+    <div>
+      <span class="text-xs text-lightGray">{{ job.date }}</span>
+    </div>
+  </div>
+
+  <div>
+    <app-gray-tag *ngFor="let tag of job.tags" [title]="tag"></app-gray-tag>
+  </div>
+</div>

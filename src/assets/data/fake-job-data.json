@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "",
+    "jobTitle": "UI/UX Designer",
+    "location": "Google inc . California, USA",
+    "salary": 150,
+    "date": "25 minute ago",
+    "tags": ["Design", "Full time", "Senior designer"]
+  },
+  {
+    "id": 2,
+    "image": "",
+    "jobTitle": "Lead Designer",
+    "location": "Google inc . California, USA",
+    "salary": 100,
+    "date": "25 minute ago",
+    "tags": ["Design", "Full time", "Senior designer"]
+  },
+  {
+    "id": 3,
+    "image": "",
+    "jobTitle": "Full Stack Developer",
+    "location": "Google inc . California, USA",
+    "salary": 190,
+    "date": "2 hours ago",
+    "tags": ["Design", "Full time", "Senior designer"]
+  },
+  {
+    "id": 4,
+    "image": "",
+    "jobTitle": "Software Engineer",
+    "location": "Google inc . California, USA",
+    "salary": 90,
+    "date": "2 days ago",
+    "tags": ["Design", "Full time", "Senior designer"]
+  }
+]

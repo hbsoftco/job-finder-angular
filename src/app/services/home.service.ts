@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Category } from '../shared/interfaces/Category';
 import { environment } from '../../environments/environment';
+import { Job } from '../shared/interfaces/Job';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,12 @@ export class HomeService {
   getAllCategories(): Observable<Category[]> {
     return this.http
       .get<Category[]>(environment.baseUrl + 'fake-category-data.json')
+      .pipe(catchError(this.handleError));
+  }
+
+  getAllJobs(): Observable<Job[]> {
+    return this.http
+      .get<Job[]>(environment.baseUrl + 'fake-job-data.json')
       .pipe(catchError(this.handleError));
   }
 
