@@ -15,12 +15,11 @@
   </app-top-bg>
 
   <div class="px-4 my-4">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-darkText font-bold text-lg">Specialization</h3>
-      <a [routerLink]="['/auth/login']" class="text-lightGray text-sm"
-        >View all</a
-      >
-    </div>
+    <app-section-title
+      title="Specialization"
+      routerLink="/auth/login"
+      routerLinkText="View all"
+    ></app-section-title>
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <div class="col-span-1" *ngFor="let category of categories">
