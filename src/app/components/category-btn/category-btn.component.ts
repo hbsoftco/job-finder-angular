@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `<button
-    class="rounded-lg bg-white p-4 group text-center shadow-md hover:bg-secondary transition-all duration-200"
+    class="rounded-lg w-full bg-white p-4 group text-center shadow-sm hover:bg-secondary transition-all duration-200"
   >
     <div
-      class="h-[67px] w-[67px] mb-2 text-center flex justify-center items-center rounded-full transition-all duration-200 bg-lightSecondary group-hover:bg-white"
+      class="h-[67px] w-[67px] m-auto mb-2 text-center flex justify-center items-center rounded-full transition-all duration-200 bg-lightSecondary group-hover:bg-white"
     >
       <img
         *ngIf="svg"

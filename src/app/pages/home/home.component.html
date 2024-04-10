@@ -22,12 +22,14 @@
       >
     </div>
 
-    <div class="">
-      <app-category-btn
-        svg="health"
-        title="Health"
-        [jobCount]="23"
-      ></app-category-btn>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="col-span-1" *ngFor="let category of categories">
+        <app-category-btn
+          [svg]="category.svg"
+          [title]="category.title"
+          [jobCount]="category.jobCount"
+        ></app-category-btn>
+      </div>
     </div>
   </div>
 </div>

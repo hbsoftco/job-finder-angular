@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "svg": "design",
+    "title": "Design",
+    "jobCount": 140
+  },
+  {
+    "id": 2,
+    "svg": "finance",
+    "title": "Finance",
+    "jobCount": 250
+  },
+  {
+    "id": 3,
+    "svg": "education",
+    "title": "Education",
+    "jobCount": 120
+  },
+  {
+    "id": 4,
+    "svg": "restaurant",
+    "title": "Restaurant",
+    "jobCount": 85
+  },
+  {
+    "id": 5,
+    "svg": "health",
+    "title": "Health",
+    "jobCount": 235
+  },
+  {
+    "id": 6,
+    "svg": "programmer",
+    "title": "Programmer",
+    "jobCount": 412
+  }
+]
