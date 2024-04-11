@@ -13,13 +13,13 @@ export class HomeService {
 
   getAllCategories(): Observable<Category[]> {
     return this.http
-      .get<Category[]>(environment.baseUrl + 'fake-category-data.json')
+      .get<Category[]>('fake-category-data.json')
       .pipe(catchError(this.handleError));
   }
 
   getAllJobs(): Observable<Job[]> {
     return this.http
-      .get<Job[]>(environment.baseUrl + 'fake-job-data.json')
+      .get<Job[]>('fake-job-data.json')
       .pipe(catchError(this.handleError));
   }
 
