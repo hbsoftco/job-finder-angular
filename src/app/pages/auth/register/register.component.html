@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div class="p-4">
+  <div class="mt-8 mb-4">
+    <img
+      src="/assets/logo.png"
+      alt="logo"
+      class="border border-gray-200 w-24 h-24 rounded-full m-auto"
+    />
+  </div>
+  <h5 class="text-center text-darkText font-normal text-xl mb-2">
+    Create an Account
+  </h5>
+  <p class="text-xs text-center text-gray-500 mb-8">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor
+  </p>
+
+  <div>
+    <TextInput label="Full name" [required]="true" />
+    <TextInput label="Email" [required]="true" />
+    <TextInput label="Password" type="password" [required]="true" />
+  </div>
+
+  <div class="flex justify-between mb-8">
+    <div></div>
+    <a routerLink="/" class="text-primary text-xs">Forgot Password?</a>
+  </div>
+
+  <div class="px-4 mb-4">
+    <c-button text="Sign Up" type="primary"></c-button>
+  </div>
+
+  <div class="px-4">
+    <social-button type="google" text="Sign In With Google"></social-button>
+  </div>
+
+  <div class="text-xs text-center mt-4">
+    <span class="text-gray-600">You already have an account? </span>
+    <a routerLink="/auth/login" class="text-primary text-xs"> Sign in</a>
+  </div>
+</div>

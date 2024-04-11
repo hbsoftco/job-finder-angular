@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   selector: 'social-button',
   standalone: true,
   imports: [CommonModule],
-  template: `<button [ngClass]="buttonClasses" class="text-darkText bg-white w-full text-xs flex justify-center items-center">
+  template: `<button [ngClass]="buttonClasses" class="text-darkText bg-white w-full text-xs h-12 flex justify-center items-center">
     <ng-content></ng-content>
     <ng-container>
       <img

@@ -27,9 +27,8 @@ export class ButtonComponent {
 
   get buttonClasses(): string[] {
     return [
-      'h-10',
       'rounded-lg',
-      !this.svg ? 'px-4 w-full' : 'px-1 w-10 text-center',
+      !this.svg ? 'px-4 w-full h-12' : 'px-1 w-10 h-10 text-center',
       this.type === 'primary'
         ? 'text-white bg-gradient-to-r text-sm from-primary to-lightPrimary'
         : 'bg-secondary text-black',
