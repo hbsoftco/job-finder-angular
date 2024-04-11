@@ -13,21 +13,84 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor
   </p>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div class="mb-3">
+        <TextInput
+          formControlName="fullName"
+          label="Full name"
+          [required]="true"
+          id="fullName"
+        />
+        <div
+          *ngIf="
+            signupForm.get('fullName')!.invalid &&
+            signupForm.get('fullName')!.touched
+          "
+          class="text-red-500 text-xs mt-1"
+        >
+          <div *ngIf="signupForm.get('fullName')!.errors!['required']">
+            Full name is required
+          </div>
+        </div>
+      </div>
+      <!-- Full Name -->
+      <div class="mb-3">
+        <TextInput
+          formControlName="email"
+          id="email"
+          label="Email"
+          [required]="true"
+        />
+        <div
+          *ngIf="
+            signupForm.get('email')!.invalid && signupForm.get('email')!.touched
+          "
+          class="text-red-500 text-xs mt-1"
+        >
+          <div *ngIf="signupForm.get('email')!.errors!['required']">
+            Email is required
+          </div>
+          <div *ngIf="signupForm.get('email')!.errors!['email']">
+            Invalid email format
+          </div>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="mb-3">
+        <TextInput
+          formControlName="password"
+          label="Password"
+          id="password"
+          type="password"
+          [required]="true"
+        />
+        <div
+          *ngIf="
+            signupForm.get('password')!.invalid &&
+            signupForm.get('password')!.touched
+          "
+          class="text-red-500 text-xs mt-1"
+        >
+          <div *ngIf="signupForm.get('password')!.errors!['required']">
+            Password is required
+          </div>
+          <div *ngIf="signupForm.get('password')!.errors!['minlength']">
+            Password must be at least 6 characters long
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div>
-    <TextInput label="Full name" [required]="true" />
-    <TextInput label="Email" [required]="true" />
-    <TextInput label="Password" type="password" [required]="true" />
-  </div>
+    <div class="flex justify-between mb-8">
+      <div></div>
+      <a routerLink="/" class="text-primary text-xs">Forgot Password?</a>
+    </div>
 
-  <div class="flex justify-between mb-8">
-    <div></div>
-    <a routerLink="/" class="text-primary text-xs">Forgot Password?</a>
-  </div>
-
-  <div class="px-4 mb-4">
-    <c-button text="Sign Up" type="primary"></c-button>
-  </div>
+    <div class="px-4 mb-4">
+      <c-button text="Sign Up" type="primary" btnType="submit"></c-button>
+    </div>
+  </form>
 
   <div class="px-4">
     <social-button type="google" text="Sign In With Google"></social-button>

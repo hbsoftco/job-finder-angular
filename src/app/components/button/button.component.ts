@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <button [ngClass]="buttonClasses">
+    <button [ngClass]="buttonClasses" [type]="btnType">
       <ng-content></ng-content>
       <ng-container>
         <img
@@ -23,6 +23,7 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() type: 'primary' | 'secondary' = 'primary';
   @Input() svg!: string;
+  @Input() btnType: string = 'button';
   @Input() text!: string;
 
   get buttonClasses(): string[] {
