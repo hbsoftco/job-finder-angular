@@ -1,10 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search-input',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: ` <div
     class="relative h-10  py-1 overflow-hidden pl-8 border border-gray-100 rounded-lg bg-white"
   >

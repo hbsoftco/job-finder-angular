@@ -5,7 +5,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { CategoryBtnComponent } from '../../components/category-btn/category-btn.component';
 import { Category } from '../../shared/interfaces/Category';
 import { HomeService } from '../../services/home.service';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { SectionTitleComponent } from '../../components/section-title/section-title.component';
 import { JobBoxComponent } from '../../components/job-box/job-box.component';
 import { Job } from '../../shared/interfaces/Job';
@@ -20,7 +20,8 @@ import { Job } from '../../shared/interfaces/Job';
     CategoryBtnComponent,
     SectionTitleComponent,
     JobBoxComponent,
-    CommonModule,
+    NgIf,
+    NgFor,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

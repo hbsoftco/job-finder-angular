@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TextInputComponent } from '../../../components/text-input/text-input.component';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { SocialButtonComponent } from '../../../components/social-button/social-button.component';
 
@@ -11,7 +11,7 @@ import { SocialButtonComponent } from '../../../components/social-button/social-
     TextInputComponent,
     ButtonComponent,
     SocialButtonComponent,
-    RouterModule,
+    RouterLink,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',

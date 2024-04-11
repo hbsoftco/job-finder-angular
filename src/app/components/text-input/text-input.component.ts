@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'TextInput',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [NgIf, ReactiveFormsModule],
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.scss'],
   providers: [

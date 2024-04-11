@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bottom-navigation-bar',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterLink],
   templateUrl: './bottom-navigation-bar.component.html',
   styleUrl: './bottom-navigation-bar.component.scss',
 })

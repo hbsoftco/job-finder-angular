@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'c-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgIf, NgClass],
   template: `
     <button [ngClass]="buttonClasses" [type]="btnType">
       <ng-content></ng-content>

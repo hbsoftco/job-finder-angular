@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-section-title',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterLink, NgIf],
   template: `<div class="flex justify-between items-center mb-4">
     <h3 class="text-darkText font-bold text-lg">{{ title }}</h3>
     <a

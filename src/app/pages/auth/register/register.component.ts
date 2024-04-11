@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TextInputComponent } from '../../../components/text-input/text-input.component';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { SocialButtonComponent } from '../../../components/social-button/social-button.component';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -11,7 +11,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
 import { User } from '../../../shared/interfaces/User.dto';
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -20,9 +20,9 @@ import { CommonModule } from '@angular/common';
     TextInputComponent,
     ButtonComponent,
     SocialButtonComponent,
-    RouterModule,
+    RouterLink,
     ReactiveFormsModule,
-    CommonModule,
+    NgIf,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',

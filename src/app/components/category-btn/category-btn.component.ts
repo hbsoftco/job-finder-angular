@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-category-btn',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgIf],
   template: `<button
     class="rounded-lg w-full bg-white p-4 group text-center shadow-sm hover:bg-secondary transition-all duration-200"
   >
@@ -18,8 +18,16 @@ import { Component, Input } from '@angular/core';
         [src]="'/assets/images/' + svg + '.svg'"
       />
     </div>
-    <h5 class="text-center text-darkText font-semibold text-sm mb-1 group-hover:text-white transition-all duration-200">{{ title }}</h5>
-    <p class="text-center text-lightGray text-xs group-hover:text-white transition-all duration-200">{{ jobCount }} Jobs</p>
+    <h5
+      class="text-center text-darkText font-semibold text-sm mb-1 group-hover:text-white transition-all duration-200"
+    >
+      {{ title }}
+    </h5>
+    <p
+      class="text-center text-lightGray text-xs group-hover:text-white transition-all duration-200"
+    >
+      {{ jobCount }} Jobs
+    </p>
   </button> `,
 })
 export class CategoryBtnComponent {
