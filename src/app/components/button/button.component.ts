@@ -29,9 +29,9 @@ export class ButtonComponent {
     return [
       'h-10',
       'rounded-lg',
-      this.svg === '' ? 'px-4' : 'px-1 w-10 text-center',
+      !this.svg ? 'px-4 w-full' : 'px-1 w-10 text-center',
       this.type === 'primary'
-        ? 'bg-primary text-white'
+        ? 'text-white bg-gradient-to-r text-sm from-primary to-lightPrimary'
         : 'bg-secondary text-black',
       'hover:bg-opacity-90',
     ];
